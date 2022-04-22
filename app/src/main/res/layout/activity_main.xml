@@ -85,7 +85,7 @@
                 android:background="#00FFFFFF"
                 android:textColor="@color/purple_700"
                 android:textStyle="bold"
-                android:text="Vacinas"
+                android:text="Sobre vacinas"
                 android:textAlignment="center"
                 android:textSize="34sp" />
             <TextView
