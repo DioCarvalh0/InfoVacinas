@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00FFFFFF"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <ImageView
+            android:id="@+id/imgBarra"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="-12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/barra"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:fontFamily="@font/baloo"
+            android:text="InfoVacinas"
+            android:textColor="#FFFFFF"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgUsc"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/usc" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="48dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="365dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="#00FFFFFF"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/imgBarra"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="#00FFFFFF"
+                android:textColor="@color/purple_700"
+                android:textStyle="bold"
+                android:text="Vacinas"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="#00FFFFFF"
+                android:textColor="@color/black"
+                android:text="Clique nas imagens para visualizar o conteúdo"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00FFFFFF"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="#00FFFFFF"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="315dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginStart="16dp"
+                        android:background="@color/purple_700"
+                        android:onClick="expand"
+                        app:cardCornerRadius="30dp"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/purple_700"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:background="#00FBFBFB"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/vacinacao">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:background="#00FFFFFF"
+                                android:fontFamily="@font/baloo"
+                                android:text="O que são vacinas?"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtSobreVacina"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="#00FFFFFF"
+                                android:text="@string/sobre_vacinas"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                android:visibility="gone" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="315dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@color/purple_700"
+                        android:onClick="expand2"
+                        app:cardCornerRadius="30dp"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/layout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/purple_700"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:background="#00FBFBFB"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/vacina_adulto">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:background="#00FFFFFF"
+                                android:fontFamily="@font/baloo"
+                                android:text="A importância da vacinação"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtSobreVacina2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="#00FFFFFF"
+                                android:text="@string/importancia_vacina"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                android:visibility="gone" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="315dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@color/purple_700"
+                        android:onClick="expand3"
+                        app:cardCornerRadius="30dp"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/layout3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/purple_700"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:background="#00FBFBFB"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/vacina_1">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:background="#00FFFFFF"
+                                android:fontFamily="@font/baloo"
+                                android:text="A importância da vacinação"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtSobreVacina3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="#00FFFFFF"
+                                android:text="@string/sobre_vacinas"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                android:visibility="gone" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:id="@+id/txtInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="16dp"
+                android:background="#00FFFFFF"
+                android:textColor="@color/purple_700"
+                android:textStyle="bold"
+                android:text="Saiba mais sobre as categorias abaixo"
+                android:textAlignment="center"
+                android:textSize="26sp" />
+
+            <ImageView
+                android:id="@+id/btnAdulto"
+                android:layout_width="320dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:background="#005E4D4D"
+                app:srcCompat="@drawable/btn_adulto" />
+
+            <ImageView
+                android:id="@+id/btnGestante"
+                android:layout_width="320dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="#005E4D4D"
+                app:srcCompat="@drawable/btn_gestante" />
+
+            <ImageView
+                android:id="@+id/btnIndigena"
+                android:layout_width="320dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="#005E4D4D"
+                app:srcCompat="@drawable/btn_indigena" />
+
+            <ImageView
+                android:id="@+id/btnCreditos"
+                android:layout_width="320dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="#005E4D4D"
+                app:srcCompat="@drawable/btn_creditos" />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

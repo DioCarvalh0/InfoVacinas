@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">InfoVacinas</string>
+    <string name="integrantes">
+        <ul>
+            <li>Lucas Rodrigues Ubaldo Walylo</li>\n
+            <li> Diogo Carvalho</li>\n
+            <li> Pedro Zanette Silva</li>\n
+            <li> Pedro Lucas Tinti</li>\n
+        </ul>
+    </string>
+
+    <string name="sobre_vacinas">
+        <p>A vacinação é uma das formas mais eficazes de combate a doenças que podem ser prevenidas, bem como no enfrentamento de epidemias \nAs vacinas nos protegem de forma segura e eficaz e permitem que nosso sitema imunológico esteja preparado para combater determinadas infecções.</p>
+    </string>
+
+    <string name="importancia_vacina">
+        <p>As vacinas são medidas de saúde social, ou seja, protegem toda a população, mesmo que alguns individuos não estejam imunizados. \nIsso se dá pela característica de rede na transmissão das doenças: se cada indivíduo infectado transmitir a doença para apenas mais uma pessoa, logo a população inteira poderá estar doente. Já um indivíduo vacinado não desenvolve a doença caso entre em contato com o vírus ou a bactéria, além de quebrar o ciclo contágio.</p>
+
+    </string>
+</resources>
